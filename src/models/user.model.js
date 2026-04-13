@@ -28,6 +28,12 @@ const User = new EntitySchema({
             type: 'varchar',
             nullable:false
         },      
+        role: {
+            type: 'varchar',
+            length: 20,
+            nullable: false,
+            default: 'ESTUDIANTE'
+        },
     }
 })
 

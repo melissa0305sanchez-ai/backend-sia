@@ -1,4 +1,4 @@
-# Proyecto de Autenticación con SQLite
+# Proyecto de Autenticación - SIA
 
 Este proyecto es un ejemplo de autenticación usando Node.js, TypeORM y SQLite. Está diseñado para que el docente pueda validar fácilmente sin necesidad de configurar una base de datos externa.
 

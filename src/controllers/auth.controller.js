@@ -9,9 +9,17 @@ const login = async (req,res) => {
 }
 
 const addUser = async (req,res) => {
-    const {name, lastname, document, password} = req.body
+    const {name, lastname, document, password, role} = req.body
     
-    const result = await authService.addUser(name, lastname, document, password);
+    const result = await authService.addUser(name, lastname, document, password, role);
+
+    res.status(result.code).json(result)
+}
+
+const setupAdmin = async (req, res) => {
+    const { name, lastname, document, password } = req.body
+
+    const result = await authService.setupAdmin(name, lastname, document, password);
 
     res.status(result.code).json(result)
 }
@@ -19,5 +27,6 @@ const addUser = async (req,res) => {
 
 module.exports = {
     login,
-    addUser
+    addUser,
+    setupAdmin
 }
